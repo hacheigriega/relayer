@@ -21,15 +21,15 @@ rm -rf ~/.certik
 
 certik init validator --chain-id yulei-1
 
-certik keys add validator
-certik keys add user --output json > $CURDIR/yulei_user_key.json
-certik keys add faucet
+certik keys add validator --keyring-backend test
+certik keys add user --output json --keyring-backend test > $CURDIR/yulei_user_key.json
+certik keys add faucet --keyring-backend test
 
-certik add-genesis-account validator 10000000000000uctk
-certik add-genesis-account user $coins
-certik add-genesis-account faucet 10000000000000uctk
+certik add-genesis-account validator 10000000000000uctk --keyring-backend test
+certik add-genesis-account user $coins --keyring-backend test
+certik add-genesis-account faucet 10000000000000uctk --keyring-backend test
 
-certik gentx validator 10000000000uctk --chain-id yulei-1 
+certik gentx validator 10000000000uctk --chain-id yulei-1 --keyring-backend test
 
 certik collect-gentxs
 
@@ -39,15 +39,15 @@ rm -rf ~/.regen
 
 regen init validator --chain-id regen-1
 
-regen keys add validator
-regen keys add user --output json > $CURDIR/regen_user_key.json
-regen keys add faucet
+regen keys add validator --keyring-backend test
+regen keys add user --output json --keyring-backend test > $CURDIR/regen_user_key.json
+regen keys add faucet --keyring-backend test
 
-regen add-genesis-account validator 10000000000000stake
-regen add-genesis-account user $coins
-regen add-genesis-account faucet 10000000000000stake
+regen add-genesis-account validator 10000000000000stake --keyring-backend test
+regen add-genesis-account user $coins --keyring-backend test
+regen add-genesis-account faucet 10000000000000stake --keyring-backend test
 
-regen gentx validator 10000000000stake --chain-id regen-1 
+regen gentx validator --amount 10000000000stake --chain-id regen-1 --keyring-backend test
 
 regen collect-gentxs
 

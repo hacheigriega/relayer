@@ -15,10 +15,10 @@ SHENTU_MNEMONIC=$(jq -r '.mnemonic' $CURDIR/yulei_user_key.json)
 REGEN_MNEMONIC=$(jq -r '.mnemonic' $CURDIR/regen_user_key.json)
 
 
-rly keys restore yulei-1 testkey $SHENTU_MNEMONIC
+rly keys restore yulei-1 testkey "$SHENTU_MNEMONIC"
 # certik1z3ajg4snv04suxdr2ndjvh40rskpg3z86up26m
 
-rly keys restore regen-1 testkey $REGEN_MNEMONIC
+rly keys restore regen-1 testkey "$REGEN_MNEMONIC"
 # regen157yf60r2653829kgvzl7k7es9rtjm92jcnp53e
 
 
@@ -53,9 +53,9 @@ rly tx link demo -d -o 3s
 
 
 
-certik --home /Users/hykim/.certik start --pruning=nothing --grpc.address=0.0.0.0:9090 --rpc.laddr=tcp://0.0.0.0:26657
+certik --home ~/.certik start --pruning=nothing --grpc.address=0.0.0.0:9090 --rpc.laddr=tcp://0.0.0.0:26657
 
-regen --home /Users/hykim/.regen start --pruning=nothing --grpc.address=0.0.0.0:9091 --rpc.laddr=tcp://0.0.0.0:26557
+regen --home ~/.regen start --pruning=nothing --grpc.address=0.0.0.0:9091 --rpc.laddr=tcp://0.0.0.0:26557
 
 
 
