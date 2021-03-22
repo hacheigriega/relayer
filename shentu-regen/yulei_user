@@ -1,0 +1,8 @@
+- name: user
+  type: local
+  address: certik10yrwzrsmgehvcpsh3vm30rtx8nxemv4y6dm5ae
+  pubkey: certikpub1addwnpepqd3flt9rejg8wuvxht56yc7nzcc2l9rqqf8f7kggwzpp7sxk2srkxq0s2uj
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+

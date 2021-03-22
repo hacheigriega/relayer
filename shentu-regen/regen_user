@@ -1,0 +1,8 @@
+- name: user
+  type: local
+  address: regen1zzzths4hcrgtpqgwq847e6a85dxqk6u02tcpqm
+  pubkey: regenpub1addwnpepqwp9h0sjkr3z9jvk2lx0fmqwmpyqjag33aqkk24dsdxq9kahng4669hfmqr
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+
