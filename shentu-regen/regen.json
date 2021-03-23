@@ -2,7 +2,7 @@
   "key": "testkey",
   "chain-id": "regen-1",
   "rpc-addr": "http://localhost:26557",
-  "account-prefix": "regen:",
+  "account-prefix": "regen",
   "gas-prices": "0.025stake",
   "default-denom": "stake",
   "trusting-period": "330h",
