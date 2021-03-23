@@ -47,7 +47,7 @@ regen add-genesis-account validator 10000000000000stake --keyring-backend test
 regen add-genesis-account user $coins --keyring-backend test
 regen add-genesis-account faucet 10000000000000stake --keyring-backend test
 
-regen gentx validator --amount 10000000000stake --chain-id regen-1 --keyring-backend test
+regen gentx validator 10000000000stake --chain-id regen-1 --keyring-backend test
 
 regen collect-gentxs
 
