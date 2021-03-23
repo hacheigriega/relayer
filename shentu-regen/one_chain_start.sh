@@ -24,7 +24,7 @@ fi
 
 # Set proper defaults and change ports (use a different sed for Mac or Linux)
 echo "Change settings in config.toml file..."
-if [ $platform = 'Linux' ] || [ $platform = 'darwin' ]; then
+if [ $platform = 'linux' ] || [ $platform = 'darwin' ]; then
 	sed -i 's#"tcp://127.0.0.1:26657"#"tcp://0.0.0.0:'"$RPCPORT"'"#g' $CHAINDIR/config/config.toml
 	sed -i 's#"tcp://0.0.0.0:26656"#"tcp://0.0.0.0:'"$P2PPORT"'"#g' $CHAINDIR/config/config.toml
 	sed -i 's#"localhost:6060"#"localhost:'"$P2PPORT"'"#g' $CHAINDIR/config/config.toml
